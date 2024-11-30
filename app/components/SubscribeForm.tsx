@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export default function SubscribeForm() {
   const [email, setEmail] = useState('');
@@ -9,29 +10,46 @@ export default function SubscribeForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const attemptsData = localStorage.getItem('subscriptionAttempts');
+    let attempts = attemptsData ? JSON.parse(attemptsData) : [];
+
+    // Filter out attempts older than 5 minutes
+    const currentTime = new Date().getTime();
+    attempts = attempts.filter((attempt: number) => currentTime - attempt < 5 * 60 * 1000);
+
+    if (attempts.length >= 3) {
+      setMessage('You have reached the subscription limit. Please try again in 5 minutes.');
+      toast.error('Subscription limit reached. Please try again later.');
+      return;
+    }
+
     setIsSubmitting(true);
     setMessage('');
 
     const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbwjtJjd-W29JWWk43QK_pgmcGbHZUiOCLKOgWIk-7ne7M1wP_dFpIzU7x9nnIWzjJq_/exec';
 
     try {
-      const response = await fetch(googleScriptUrl, {
+      await fetch(googleScriptUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email }),
+        mode: 'no-cors', // Bypass CORS restrictions
       });
 
-      if (response.ok) {
-        setMessage('Subscription successful!');
-        setEmail(''); // Clear the email field on success
-      } else {
-        setMessage('Subscription failed. Please try again.');
-      }
+      setMessage('Subscription successful!');
+      setEmail(''); // Clear the email field on success
+      toast.success('Subscription successful!');
+
+      // Update the attempts with current time
+      attempts.push(currentTime);
+      localStorage.setItem('subscriptionAttempts', JSON.stringify(attempts));
     } catch (error) {
       console.error('Error occurred while subscribing:', error);
       setMessage('An error occurred. Please try again later.');
+      toast.error('An error occurred. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
