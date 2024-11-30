@@ -115,7 +115,7 @@ export default function Home() {
           </a>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-black dark:text-white"
-            href="mailto:pmna@gmail.com"
+            href="mailto:hello@pmna.store"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -133,7 +133,7 @@ export default function Home() {
                 d="M 4 12 C 2.895 12 2 12.895 2 14 L 2 36 C 2 37.105 2.895 38 4 38 L 46 38 C 47.105 38 48 37.105 48 36 L 48 14 C 48 12.895 47.105 12 46 12 L 4 12 z M 4 14 L 25 28 L 46 14"
               />
             </svg>
-            pmna@gmail.com
+            hello@pmna.store
           </a>
 
         </footer>
