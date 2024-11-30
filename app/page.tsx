@@ -45,9 +45,9 @@ export default function Home() {
         <meta property="og:title" content="PMNA | Street x Culture" />
         <meta
           property="og:description"
-          content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
+          content="Pamana – Where Streetwear Meets Culture. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
         />
-        <meta property="og:image" content="https://pmna.iligan.dev/og-image.jpg" />
+        <meta property="og:image" content="https://pmna.iligan.dev/PAMANA_JPG.jpg" />
         <meta property="og:url" content="https://pmna.iligan.dev/" />
 
         {/* Twitter */}
@@ -57,7 +57,7 @@ export default function Home() {
           name="twitter:description"
           content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
         />
-        <meta name="twitter:image" content="https://pmna.iligan.dev/og-image.jpg" />
+        <meta name="twitter:image" content="https://pmna.iligan.dev/PAMANA_JPG.jpg" />
       </Head>
 
       <div className="p-10 font-[family-name:var(--font-geist-sans)]">
