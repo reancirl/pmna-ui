@@ -30,7 +30,7 @@ export default function SubscribeForm() {
   };
 
   return (
-    <div className="text-center inline-flex flex-col items-center gap-4">
+    <div className="text-center inline-flex flex-col items-center">
       <form onSubmit={handleSubmit} className="flex items-stretch">
         <input
           type="email"
