@@ -39,6 +39,7 @@ export default function Home() {
           name="description"
           content="PMNA – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
         />
+        <link rel="icon" href="https://pmna.iligan.dev/PAMANA_JPG.jpg" type="image/jpeg" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
