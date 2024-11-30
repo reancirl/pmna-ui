@@ -44,7 +44,7 @@ export default function SubscribeForm() {
         />
         <button
           type="submit"
-          className="px-6 text-lg font-semibold text-white bg-black rounded-r-md hover:bg-gray-800 transition-all"
+          className="px-6 text-lg font-semibold text-white bg-black rounded-r-md border border-transparent hover:bg-gray-800 hover:border-black transition-all dark:bg-gray-300 dark:text-gray-800 dark:hover:bg-black dark:hover:text-white dark:border-gray-300 dark:hover:border-white"
           style={{ height: '48px' }} // Explicit height to ensure it matches the input
         >
           Subscribe
