@@ -1,12 +1,8 @@
+"use client";
+
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-
-export const metadata = {
-  title: "PMNA | Street x Culture",
-  description:
-    "Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers.",
-};
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -30,7 +26,7 @@ export default function Home() {
         setMessage('Subscription failed. Please try again.');
       }
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (e) {
+    } catch (error) {
       setMessage('An error occurred. Please try again later.');
     }
   };
@@ -39,20 +35,29 @@ export default function Home() {
     <>
       <Head>
         <title>PMNA | Street x Culture</title>
-        <meta name="description" content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers." />
-        
+        <meta
+          name="description"
+          content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
+        />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="PMNA | Street x Culture" />
-        <meta property="og:description" content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers." />
-        <meta property="og:image" content="https://pmna.iligan.dev/pmna_black.svg" />
+        <meta
+          property="og:description"
+          content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
+        />
+        <meta property="og:image" content="https://pmna.iligan.dev/og-image.jpg" />
         <meta property="og:url" content="https://pmna.iligan.dev/" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PMNA | Street x Culture" />
-        <meta name="twitter:description" content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers." />
-        <meta name="twitter:image" content="https://pmna.iligan.dev/pmna_black.svg" />
+        <meta
+          name="twitter:description"
+          content="Pamana – Where Streetwear Meets Cultural Heritage. Stay in the Loop and Subscribe Now for Exclusive Updates and Street x Culture Offers."
+        />
+        <meta name="twitter:image" content="https://pmna.iligan.dev/og-image.jpg" />
       </Head>
 
       <div className="p-10 font-[family-name:var(--font-geist-sans)]">
@@ -132,7 +137,7 @@ export default function Home() {
             <Image
               aria-hidden
               src="/globe.svg"
-              alt="instagram icon"
+              alt="email icon"
               width={20}
               height={20}
             />
