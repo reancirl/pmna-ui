@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import toast from 'react-hot-toast';
 
 export default function SubscribeForm() {
   const [email, setEmail] = useState('');
@@ -20,7 +19,6 @@ export default function SubscribeForm() {
 
     if (attempts.length >= 3) {
       setMessage('You have reached the subscription limit. Please try again in 5 minutes.');
-      toast.error('Subscription limit reached. Please try again later.');
       return;
     }
 
@@ -41,7 +39,6 @@ export default function SubscribeForm() {
 
       setMessage('Subscription successful!');
       setEmail(''); // Clear the email field on success
-      toast.success('Subscription successful!');
 
       // Update the attempts with current time
       attempts.push(currentTime);
@@ -49,7 +46,6 @@ export default function SubscribeForm() {
     } catch (error) {
       console.error('Error occurred while subscribing:', error);
       setMessage('An error occurred. Please try again later.');
-      toast.error('An error occurred. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
