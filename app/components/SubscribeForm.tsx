@@ -65,7 +65,7 @@ export default function SubscribeForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-1 px-4 py-3 text-lg border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-black dark:border-gray-600"
+          className="flex-1 px-4 py-3 text-lg border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-black dark:border-gray-600 dark:text-black"
         />
         <button
           type="submit"
