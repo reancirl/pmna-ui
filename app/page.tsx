@@ -81,7 +81,7 @@ export default function Home() {
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center pt-10">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-black dark:text-white"
-            href="https://www.facebook.com/alibataclothingph"
+            href="https://www.facebook.com/pmnaclothing"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -98,7 +98,7 @@ export default function Home() {
           </a>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-black dark:text-white"
-            href="https://www.instagram.com/alibataclothingph"
+            href="https://www.instagram.com/pmnaclothing/"
             target="_blank"
             rel="noopener noreferrer"
           >
